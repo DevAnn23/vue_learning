@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>VUE</title>
+
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="projectTest">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="icon" type="image/png" href="img/fire.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet">
+	<link href="css/responsive.css" rel="stylesheet">
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+	<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+	<script async src="script.js"></script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js dohresn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body onresize="myFunction()">
+	<header class="header">
+		<nav class="nav">
+			<a class="logo-link" href=""><img src="img/logo.png" style="float:left"width="10%" alt="logo"><h1>Nazwa Firmy</h1></a>
+			<div id="appMenu">
+				<div>
+					<button id="button-menu">Menu</button>
+				</div>
+
+
+				<ul class="menu">
+					<li class="menu-item"><a class="menu-link" href="#">Home</a></li>
+					<li class="menu-item"><a class="menu-link" href="#">Apps</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a class="submenu-link" href="#">Standard</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="#">More</a></li>
+						</ul>
+					</li>
+					<li class="menu-item"><a class="menu-link" href="#">Team</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a class="submenu-link" href="#">Team A</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="#">Team B</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="#">Team C</a></li>
+						</ul>
+					</li>
+					<li class="menu-item"><a class="menu-link" href="#">Services</a>
+						<ul class="submenu">
+							<li class="submenu-item"><a class="submenu-link" href="#">For You</a></li>
+							<li class="submenu-item"><a class="submenu-link" href="#">For Your Company</a></li>
+						</ul>
+					</li>
+					<li class="menu-item"><a class="menu-link" href="#contact">Contact</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main>
+
+		<section>
+			<div class="main-banner">
+
+				<article class="night">
+					<h2 class="heading-banner">Wyłączasz światło, włączasz oszczędzanie!</h2>
+				</article>
+				<div class="neon"></div>
+			</div>
+			<div class="light"><input type="range" name="neon" min="0" max="100" value="50"><span class="valueOpacity">50%</span>
+				<span class="ion-social-usd-outline"></span></div>
+		</section>
+		<section class="container">
+			<br><br>
+			<article id="app-kurs1" v-cloak>
+				<h1>{{heading}}</h1>
+				<p>{{toUpperCase(text)}}</p>
+			</article>
+			<article id="app8" v-cloak>
+				<h3>Zapisz się do księgi Gości</h3>
+				<input type="text" id="input" v-model="guestName">
+				<button v-on:click="addCategory">Zapisz</button>
+				<ol class="guests-list">
+					<li class="guest-item-list" v-for="guestName in guests">
+						{{ guestName }}
+					</li>
+				</ol>
+
+			</article>
+
+		</section>
+
+	</main>
+	<aside id="app-3" v-cloak>
+		<ul class="vertical-list" v-if="seen">
+			<li class="facebook item-li">
+				<a href=""><span class="icon-social ion-social-facebook"></span></a>
+			</li>
+			<li class="twitter item-li">
+				<a href="https://twitter.com/"><span class="icon-social ion-social-twitter"></span></a>
+			</li>
+			<li class="gp item-li">
+				<a href=""><span class="icon-social ion-social-googleplus"></span></a>
+			</li>
+			<li class="in item-li">
+				<a href="https://www.linkedin.com/"><span class="icon-social ion-social-linkedin"></span></a>
+			</li>
+		</ul>
+	</aside>
+	<footer>
+		<h6>Created by<strong> Anna Banaszek</strong><span class="oi ion-ios-lightbulb-outline"></span></h6>
+		<p>Check out my other projects</p>
+		<a class="project" href="https://devann23.github.io/projekt_testowy//">CSS, HTML, JS</a>
+		<a class="project" href="https://devann23.github.io/python_creator//">Bootstrap</a>
+		<a class="project" href="https://devann23.github.io/przyklady_javascript//">javaSript</a>
+		<a class="project" href="https://devann23.github.io/about_me//">O sobie</a>
+	</footer>
+
+</body>
+
+</html>

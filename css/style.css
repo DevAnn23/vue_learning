@@ -1,0 +1,343 @@
+html {
+	font-size: 10px;
+}
+[v-cloak] {
+	color: antiquewhite;
+}
+
+h1 {
+	line-height: normal;
+}
+a:hover {
+text-decoration: none;
+}
+:root {
+	--bgcolor: #000000;
+	/* zmienna w css*/
+}
+body {
+	transition: all .9s;
+	margin: 0;
+	padding: 0;
+}
+
+/**********List******/
+.guests-list {
+	list-style-position: inside;
+	width: 50%;
+	text-align: center;
+	margin: 10px;
+}
+
+.guest-item-list {
+	border: 1px solid #d2aaaa;
+	font-family: cursive;
+	overflow: auto;
+}
+article {
+	margin: 5% 0;
+	background-color: darkgrey;
+	line-height: 50px;
+	
+}
+/*header*/
+.header {
+	
+	padding: 10px;
+}
+.heading-header {
+	text-align: center;
+}
+.item-list:hover {
+color: red;
+}
+.item-list:hover .sub-menu {
+	display: block;
+}
+.item-list {
+	margin-left: 10px;
+	padding: 10px;
+}
+.menu {
+	display: none;
+}
+.submenu-link,
+.menu-link {
+	display: block;
+	text-decoration: none;
+	font-family: 'Lalezar', sans-serif;
+	padding: 0 5px;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	z-index: 1;
+}
+
+.menu-item {
+	float: left;
+	width: 140px;
+	margin-left: 1px;
+	height: 2em;
+	list-style-type: none;
+	background-color: darkblue;
+	z-index: 1;
+}
+
+.menu-item:first-child {
+	margin-left: 0;
+}
+.submenu-item {
+	background-color: #00008b;
+	position: relative;
+/*	line-height: 1.2;*/
+	z-index: 1;
+}
+
+/* ------------------------CZĘŚĆ-ROZWIJANA-MENU------------------------ */
+
+.submenu-item:hover {
+	color: #12a;
+	box-shadow: inset -4px -8px 5px 0px #0062cc;
+	color: #12323f;
+	z-index: 1;
+
+}
+.menu-item:hover > .submenu {
+	display: block;
+}
+
+.submenu {
+	display: none;
+	list-style-type: none;
+	padding: 2px;
+	margin-bottom: 2px;
+	text-align: center;
+}
+
+.nav {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+	align-items: center;
+/*
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    
+*/
+	
+    }
+
+.logo-link {
+	border:1px solid  blue;
+	width: 50%;
+/*
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 2 1 auto;
+    -ms-flex: 2 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+*/
+	text-align: left;
+    }
+
+.displayList {
+	display: block;
+}
+.sub-menu {
+
+	list-style: none;
+	display: none;
+}
+
+.main-banner {
+	background-image: url(../img/rawpixel-com-445793.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0;
+	height: 300px;
+	width: 100%;
+}
+
+main {
+	min-height: 1000px;
+}
+
+.night {
+	background-color: var(--bgcolor);
+	opacity: 0.3;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+.light {
+	text-shadow: rgba(255, 255, 255, 0.8)0 0 40px;
+	color: #f1d83d;
+	background-color: var(--bgcolor);
+	font-size: 4rem;
+	padding: 10px;
+	text-align: center;
+}
+
+.neon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-size: 2rem;
+}
+
+.heading-banner {
+	color: #ffc107;
+	font-size: 2rem;
+}
+
+/*footer*/
+
+footer {
+	background-color: #334252;
+	color: #aaaaaa;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 0.8rem;
+}
+
+footer:hover .oi {
+	color: #d8f07c;
+	transition: all 0.5s steps(5);
+	text-shadow: rgba(255, 255, 255, 0.8)0 0 40px;
+	
+}
+
+.oi {
+	margin-left: 5px;
+}
+
+.heading-header {
+	text-align: center;
+}
+
+.project {
+	border: 1px double #49627d;
+	padding: 4px;
+	transition: all 0.5s steps(3);
+	margin: 15px;
+	text-transform: uppercase;
+}
+
+/* Aside - social*/
+
+.vertical-list {
+	position: fixed;
+	left: -40px;
+	bottom: 150px;
+	list-style: none;
+}
+
+.vertical-list .item-li {
+	text-align: center;
+	padding: 5px;
+	overflow: hidden;
+}
+
+ul.vertical-list li:first-child {
+	border-radius: 0 15px 0 0;
+}
+
+.twitter {
+	background-color: #95ccee;
+}
+
+.in {
+	background-color: #0077b5;
+	overflow: hidden;
+	color: red;
+}
+
+.facebook {
+	background-color: #617bba;
+}
+
+.gp {
+	background-color: #dd4b39;
+}
+
+.item-li a {
+	color: #ffffff;
+	text-decoration: none;
+
+}
+
+
+/****input-range ****/
+
+input[type=range] {
+	outline: none;
+	padding: 0;
+	width: 20%px;
+	height: 2px;
+	background-color: #dedede;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffc107), color-stop(100%, #ff1100));
+	background-size: 50% 100%;
+	background-repeat: no-repeat;
+	border-radius: 10px;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin: 12.85px 15px;
+	vertical-align: middle;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	-webkit-appearance: none;
+}
+
+input[type=range]::-moz-range-track {
+	box-shadow: none;
+	border: none;
+	background: transparent;
+	-webkit-appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	height: 18px;
+	width: 28px;
+	border: 0;
+	background: #fff;
+	border: 1px solid #777;
+	border-radius: 8px;
+	box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
+	-webkit-appearance: none;
+}
+
+/* All the same stuff for Firefox */
+
+input[type=range]::-moz-range-thumb {
+	height: 18px;
+	width: 28px;
+	border: 0;
+	background: #fff;
+	border: 1px solid #777;
+	border-radius: 8px;
+	box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
+}
+
