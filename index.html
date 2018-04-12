@@ -23,8 +23,10 @@
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.js"></script>
+
 	<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
 	<script async src="script.js"></script>
+
 
 	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js dohresn't work if you view the page via file:// -->
@@ -86,11 +88,19 @@
 		<section class="container">
 			<br><br>
 			<article id="app-kurs1" v-cloak>
-				<h1>{{heading}}</h1>
-				<p>{{toUpperCase(text)}}</p>
+				<h3 class="to-right">{{toUpperCase(haslo)}}</h3>
+				<p>Moje Imie: {{firstname + " " + lastname}}</p>
+				<!--		sposób pierwszy	interpolacja-->
+				<p>{{ fullName2 + " cześć" }}</p>
+				<!--			sposób drugi dyrektywa  <p v-text="fullName2 + ' cześć!'"></p>-->
+				<img v-bind:src="img" :title="title">
+				<h3 class="to-right">{{fullName()}}</h3>
+				<p>Przykład: {{ random() }}</p>
+				<p>Przykład: {{ testowy }}</p>
+				<div class="green"><a v-bind:href="url" v-html="embolden(fullName2 + ' strona oficjalna')"></a></div>
 			</article>
 			<article id="app8" v-cloak>
-				<h3>Zapisz się do księgi Gości</h3>
+				<h4>Zapisz się do księgi Gości</h4>
 				<input type="text" id="input" v-model="guestName">
 				<button v-on:click="addCategory">Zapisz</button>
 				<ol class="guests-list">
@@ -100,9 +110,9 @@
 				</ol>
 
 			</article>
-
+			<div id="object"></div>
 		</section>
-
+		<div class="auto-bg"></div>
 	</main>
 	<aside id="app-3" v-cloak>
 		<ul class="vertical-list" v-if="seen">
@@ -120,10 +130,12 @@
 			</li>
 		</ul>
 	</aside>
+
 	<footer>
 		<h6>Created by<strong> Anna Banaszek</strong><span class="oi ion-ios-lightbulb-outline"></span></h6>
 		<p>Check out my other projects</p>
 		<a class="project" href="https://devann23.github.io/projekt_testowy//">CSS, HTML, JS</a>
+		<a class="project" href="labirynt.html"  target="_blank">Niespodzianka</a>
 		<a class="project" href="https://devann23.github.io/python_creator//">Bootstrap</a>
 		<a class="project" href="https://devann23.github.io/przyklady_javascript//">javaSript</a>
 		<a class="project" href="https://devann23.github.io/about_me//">O sobie</a>

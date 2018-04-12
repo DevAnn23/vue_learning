@@ -1,27 +1,50 @@
 html {
 	font-size: 10px;
 }
+
 [v-cloak] {
 	color: antiquewhite;
+}
+
+.to-right {
+	color: #2c1aa4;
+	-webkit-transform: rotate(20deg);
+	transform: rotate(20deg);
+	float: right;
 }
 
 h1 {
 	line-height: normal;
 }
-a:hover {
-text-decoration: none;
+
+.green {
+	background-color: #11f4a1;
+	padding: 3%;
 }
+
+#app-kurs1 img {
+	float: left;
+	margin: 0 2%;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 :root {
 	--bgcolor: #000000;
 	/* zmienna w css*/
 }
+
 body {
+	-webkit-transition: all .9s;
 	transition: all .9s;
 	margin: 0;
 	padding: 0;
 }
 
 /**********List******/
+
 .guests-list {
 	list-style-position: inside;
 	width: 50%;
@@ -34,33 +57,42 @@ body {
 	font-family: cursive;
 	overflow: auto;
 }
+
 article {
 	margin: 5% 0;
 	background-color: darkgrey;
 	line-height: 50px;
-	
+
 }
+
 /*header*/
+
 .header {
-	
+
 	padding: 10px;
 }
+
 .heading-header {
 	text-align: center;
 }
+
 .item-list:hover {
-color: red;
+	color: red;
 }
+
 .item-list:hover .sub-menu {
 	display: block;
 }
+
 .item-list {
 	margin-left: 10px;
 	padding: 10px;
 }
+
 .menu {
 	display: none;
 }
+
 .submenu-link,
 .menu-link {
 	display: block;
@@ -86,10 +118,11 @@ color: red;
 .menu-item:first-child {
 	margin-left: 0;
 }
+
 .submenu-item {
 	background-color: #00008b;
 	position: relative;
-/*	line-height: 1.2;*/
+	/*	line-height: 1.2;*/
 	z-index: 1;
 }
 
@@ -97,11 +130,13 @@ color: red;
 
 .submenu-item:hover {
 	color: #12a;
+	-webkit-box-shadow: inset -4px -8px 5px 0px #0062cc;
 	box-shadow: inset -4px -8px 5px 0px #0062cc;
 	color: #12323f;
 	z-index: 1;
 
 }
+
 .menu-item:hover > .submenu {
 	display: block;
 }
@@ -115,11 +150,13 @@ color: red;
 }
 
 .nav {
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
 	align-items: center;
-/*
+	/*
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
@@ -136,13 +173,12 @@ color: red;
     -ms-flex-align: baseline;
     
 */
-	
-    }
+}
 
 .logo-link {
-	border:1px solid  blue;
+	border: 1px solid blue;
 	width: 50%;
-/*
+	/*
     -webkit-order: 0;
     -ms-flex-order: 0;
     order: 0;
@@ -154,11 +190,12 @@ color: red;
     align-self: auto;
 */
 	text-align: left;
-    }
+}
 
 .displayList {
 	display: block;
 }
+
 .sub-menu {
 
 	list-style: none;
@@ -211,7 +248,7 @@ main {
 /*footer*/
 
 footer {
-	background-color: #334252;
+	background-color: #060505;
 	color: #aaaaaa;
 	text-align: center;
 	width: 100%;
@@ -221,9 +258,10 @@ footer {
 
 footer:hover .oi {
 	color: #d8f07c;
+	-webkit-transition: all 0.5s steps(5);
 	transition: all 0.5s steps(5);
 	text-shadow: rgba(255, 255, 255, 0.8)0 0 40px;
-	
+
 }
 
 .oi {
@@ -237,6 +275,7 @@ footer:hover .oi {
 .project {
 	border: 1px double #49627d;
 	padding: 4px;
+	-webkit-transition: all 0.5s steps(3);
 	transition: all 0.5s steps(3);
 	margin: 15px;
 	text-transform: uppercase;
@@ -305,6 +344,7 @@ input[type=range] {
 }
 
 input[type=range]::-webkit-slider-runnable-track {
+	-webkit-box-shadow: none;
 	box-shadow: none;
 	border: none;
 	background: transparent;
@@ -325,6 +365,7 @@ input[type=range]::-webkit-slider-thumb {
 	background: #fff;
 	border: 1px solid #777;
 	border-radius: 8px;
+	-webkit-box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
 	box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
 	-webkit-appearance: none;
 }
@@ -341,3 +382,63 @@ input[type=range]::-moz-range-thumb {
 	box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.1);
 }
 
+.auto-bg {
+	height: 100vh;
+	background-image: url(../img/cary.png), url(../img/automobile.png), url(../img/car.png), url(../img/crane.png), url(../img/motor-sports.png), url(../img/transportation.png), url(../img/work-tools.jpg);
+	background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+	background-size: auto 15%, auto 15%, auto 15%, auto 15%, auto 10%, auto 15%, auto 32%;
+	background-position: top 5% left 5%, top 23% left 5%, top 35% left 5%, top 60% left 5%, top 46% left -60%, top 80% left 5%, top 0% left 0%;
+	-webkit-transition: background-position 7s ease;
+	transition: background-position 7s ease;
+}
+
+.auto-bg:hover {
+	background-position: top 5% left 95%, top 23% left 89%, top 35% left 75%, top 60% left 76%, top 46% left 306%, top 80% left 55%, top 0 left -200%;
+}
+
+/* samuraj - ćwiczenia */
+
+.no-vue {
+	width: 90%;
+	height: 100vh;
+	margin: 2% auto;
+	background-image: url(../img/labyrinth-153958_1280.png);
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center;
+	position: relative;
+	overflow: scroll;
+}
+
+.info {
+	font-size: 22px;
+	background-color: red;
+	border: 2px solid red;
+	width: 70px;
+	height: 70px;
+	background-image: url(../img/android-logo.png);
+	background-repeat: repeat-x;
+	background-position: top 10% left 4%, top 5% left 5%;
+	position: absolute;
+	right: 15%;
+	top: 22%;
+	-webkit-filter: hue-rotate(139deg);
+	filter: hue-rotate(139deg);
+	border: 1px solid red;
+	padding: 18%;
+	    z-index: -1;
+}
+
+.circle {
+	width: 17px;
+	height: 44px;
+	background-image: url(../img/android-logo.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	background-size: 100%;
+	top: 373px;
+	left: 61px;
+	-webkit-transform: translate(-50% -50%);
+	transform: translate(-50% -50%);
+	z-index: 2;
+}

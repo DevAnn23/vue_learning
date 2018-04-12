@@ -1,5 +1,15 @@
 //'use strict';
 jQuery
+var object = document.getElementById("object");
+var obj = {
+	firstName: "Janek",
+	lastName: "Kowalski",
+	get allName() {
+		return this.firstName + this.lastName;
+		console.log("nowy obiekt");
+	}
+}
+object.innerHTML = obj.allName;
 $('input[type=range]').on('input', function (e) {
 	var min = e.target.min,
 		max = e.target.max,
@@ -52,16 +62,44 @@ myFunction();
 
 // VUE ***
 
-
 var appKurs1 = new Vue({
 	el: "#app-kurs1",
 	data: {
 		heading: "Witaj, to jest mój kurs Vue",
-		text: "Zdaję sobię sprawę, że dużo sie tu dzieję."
+		text: "Także, tego",
+		haslo: "Hello, world!",
+		testowy: 12,
+		firstname: "Anna",
+		lastname: "Banaszek",
+		url: "https://devann23.github.io/about_me/",
+		img: "img/fire.png",
+		title: "płomieeń nadziei"
+
+	},
+	// można tez wywołać przez computed jest wydajniejsze wywołujemy bez nawiasów
+	computed: {
+		fullName2: function() {
+			console.log("To jest fullName");
+			return this.firstname + " " + this.lastname;
+		}
 	},
 	methods: {
 		toUpperCase: function(value){
 			return value.toUpperCase();
+		},
+//		mozna to zapisać jako metoda i wtdedy w html wywołujemy normalnie funckcję z (),
+		fullName: function() {
+			console.log("to jest metoda fullname");
+			return this.firstname + " " + this.lastname;
+		},
+		getName: function(){
+			this.name = prompt("Podaj swoje imię");
+		},
+		random: function(){
+			return Math.floor(Math.random() * 1000).toString(16);
+		},
+		embolden: function(value){
+			return "<strong>" + value + "</strong>";
 		}
 	}
 	
@@ -77,7 +115,8 @@ var app8 = new Vue({
 	el: '#app8',
 	data: {
 		counter: 0,
-		guests: ['Adam', 'Anna', 'Jan']
+		guests: ['Adam', 'Anna', 'Jan'],
+		guestName: ""
 	},
 	methods: {
 		addCategory() {

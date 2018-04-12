@@ -27,15 +27,28 @@
 	.vertical-list .item-li:hover {
 		width: 100px;
 		text-align: center;
+		-webkit-transition: all .9s;
 		transition: all .9s;
 	}
 	.flex-box {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
 	}
 	.logo-link {
 		width: 100%;
 		text-align: center;
 		color: darkseagreen;
+	}
+	.info {
+
+		top: 27%;
+		padding: 9%;
+	}
+	.circle {
+		top: 602px;
+		left: 182px;
+
 	}
 
 }
@@ -45,5 +58,29 @@
 		width: 50%;
 		text-align: center;
 		color: red;
+	}
+	.info {
+		font-size: 22px;
+		background-color: red;
+		border: 2px solid red;
+		width: 70px;
+		height: 70px;
+		background-image: url(../img/android-logo.png);
+		background-repeat: repeat-x;
+		background-position: top 10% left 4%, top 5% left 5%;
+		position: absolute;
+		right: 17%;
+		top: 10%;
+		-webkit-filter: hue-rotate(139deg);
+		filter: hue-rotate(139deg);
+		border: 1px solid red;
+		padding: 4%;
+	}
+	.circle {
+		background-size: 100%;
+		top: 673px;
+		left: 389px;
+		width: 35px;
+
 	}
 }
