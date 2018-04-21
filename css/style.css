@@ -412,8 +412,6 @@ input[type=range]::-moz-range-thumb {
 
 .info {
 	font-size: 22px;
-	background-color: red;
-	border: 2px solid red;
 	width: 70px;
 	height: 70px;
 	background-image: url(../img/android-logo.png);
@@ -428,13 +426,13 @@ input[type=range]::-moz-range-thumb {
 	padding: 18%;
 	    z-index: -1;
 }
-
-.circle {
-	width: 17px;
-	height: 44px;
-	background-image: url(../img/android-logo.png);
-	background-repeat: no-repeat;
+.fruit {
+	width: 15px;
 	position: absolute;
+}
+.circle {
+	position: absolute;
+	width: 15px;
 	background-size: 100%;
 	top: 373px;
 	left: 61px;

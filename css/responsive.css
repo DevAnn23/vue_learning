@@ -77,10 +77,12 @@
 		padding: 4%;
 	}
 	.circle {
-		background-size: 100%;
 		top: 673px;
 		left: 389px;
-		width: 35px;
+		width: 30px;
 
+	}
+	.fruit {
+		width: 25px;
 	}
 }
